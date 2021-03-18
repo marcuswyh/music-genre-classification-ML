@@ -1,0 +1,108 @@
+
+
+before feature extraction
+==========================
+knn:  0.616
+svm:  0.404
+decision tree:  0.48699999999999993
+Gaussian NB:  0.43200000000000005
+random forest:  0.6519999999999999
+nearest centroid:  0.414
+extra tree:  0.409
+extra trees:  0.671
+
+
+after feature extraction 
+========================
+knn:  0.613
+svm:  0.43599999999999994
+decision tree:  0.4710000000000001
+Gaussian NB:  0.446
+random forest:  0.649
+nearest centroid:  0.421
+extra tree:  0.38400000000000006
+extra trees:  0.656
+
+
+
+
+
+#======= HYPER PARAMETER OPTIMIZATION ===============
+
+random forest
+==============
+random forest:  0.6519999999999999
+Random forest best params:  {'criterion': 'entropy', 
+			     'max_depth': 10,
+			     'max_features': 'log2', 
+			     'n_estimators': 200,
+			     'random_state': 0
+			    }  
+with a score of  0.676
+
+
+extra trees
+==============
+extra trees:  0.671
+Extra trees best params:  {'criterion': 'gini', 
+			   'max_depth': 17, 
+			   'max_features': 'sqrt', 
+			   'n_estimators': 300
+			   'random_state': 0} 
+with a score of  0.69
+
+
+
+knn classifier
+==============
+knn: 0.616
+knn best params:  {'algorithm': 'ball_tree', 
+		   'n_neighbors': 7, 
+		   'p': 2, 
+		   'weights': 'distance'} 
+
+with a score of  0.649
+
+
+
+
+#======= FEATURE EXTRACTION RESEARCH ===============
+
+FILTER METHOD - CORRELATION
+===========================
+knn:  0.6039999999999999
+random forest:  0.6010000000000001
+extra trees:  0.623
+
+
+BACKWARD ELIMINATION METHOD
+===========================
+knn:  0.599
+random forest:  0.631
+extra trees:  0.642
+
+
+GREEDY FEATURE SELECTION
+===========================
+knn:  0.649
+random forest:  0.676
+extra trees:  0.69
+
+
+L1 BASED (LASSO) FEATURE SELECTION
+==================================
+knn:  0.648
+random forest:  0.6639999999999999
+extra trees:  0.685
+total features: 28
+selected features: 23
+features with coefficients shrank to zero: 219
+
+
+L2 BASED (RIDGE) FEATURE SELECTION
+==================================
+knn:  0.6389999999999999
+random forest:  0.6329999999999999
+extra trees:  0.6519999999999999
+total features: 28
+selected features: 11
